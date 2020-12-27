@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setup(
-    name="flask_minio",
+    name="flask_minio_factory",
     version="0.1.0",
     author="",
     author_email="",
