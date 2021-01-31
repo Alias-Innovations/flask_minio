@@ -20,16 +20,17 @@ setup(
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.9',
         'License :: OSI Approved :: MIT License',
     ],
     install_requires=[
-        'Flask',
         'minio'
     ],
     setup_requires=['pytest-runner'],
     tests_require=['pytest'],
     extras_require={
         'dev': [
+            'Flask',
             'pytest',
             'coveralls',
             'coverage'
