@@ -6,7 +6,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name="flask_minio_factory",
-    version="0.1.0",
+    version="0.1.1",
     author="",
     author_email="",
     description="A package, which provides easy usage for minio with flask",
