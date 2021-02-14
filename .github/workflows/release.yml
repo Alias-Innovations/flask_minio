@@ -1,6 +1,6 @@
-name: Flask minio
+name: Flask minio release pipeline
 
-on: [push]
+on: [release]
 
 jobs:
   test:
