@@ -26,7 +26,7 @@ def test_minio_client_created_with_init_app():
     assert minio.client.bucket_exists('img') is True
 
 
-def test_mini_client_created_diretly():
+def test_minio_client_created_directly():
     app = Flask(__name__)
 
     # Configuring flask for minio
@@ -40,3 +40,17 @@ def test_mini_client_created_diretly():
 
     assert minio.client is not None
     assert minio.client.bucket_exists('img') is True
+
+
+def test_minio_could_be_created_without_bucket_provided():
+    app = Flask(__name__)
+
+    # Configuring flask for minio
+    app.config['MINIO_URL'] = '172.17.0.1:9000'
+    app.config['MINIO_ACCESS_KEY'] = 'minioaccesskey'
+    app.config['MINIO_SECRET_KEY'] = 'miniosecretkey'
+    app.config['MINIO_SECURE_CONNECTION'] = False
+
+    minio = Minio(app)
+
+    assert minio.client is not None
