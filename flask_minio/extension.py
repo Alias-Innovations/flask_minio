@@ -34,7 +34,7 @@ class Minio(object):
             credentials=app.config.get('MINIO_CREDENTIALS'),
         )
 
-        for bucket in app.config.get('MINIO_BUCKETS'):
+        for bucket in app.config.get('MINIO_BUCKETS', []):
             if not self.client.bucket_exists(bucket):
                 self.client.make_bucket(bucket)
 
